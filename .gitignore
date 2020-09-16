@@ -1,0 +1,16 @@
+
+# node modules
+**/node_modules
+
+# apple ds store
+./DS_Store
+
+# private
+**/key.ts
+
+# build / dist / public folder
+**/dist
+**/public
+
+# cache
+**/.cache
