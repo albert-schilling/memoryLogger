@@ -1,5 +1,5 @@
-import { TMemoryAverage, TMemoryStatus } from '../../memoryLog'
 import { meanBy } from 'lodash'
+import { TMemoryAverage, TMemoryStatusReduced } from '../../types'
 import {
   stringifyObjectValues,
   numberizeObjectValues,
@@ -7,7 +7,7 @@ import {
 
 export function recalculateSessionAverage(
   average: TMemoryAverage,
-  memoryStatus: TMemoryStatus
+  memoryStatus: TMemoryStatusReduced
 ): TMemoryAverage {
   const newAverage = stringifyObjectValues(
     reCalculateAverge(

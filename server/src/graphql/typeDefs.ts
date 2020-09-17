@@ -19,6 +19,7 @@ export const typeDefs = gql`
     jsHeapSizeLimit: String
     totalJSHeapSize: String
     usedJSHeapSize: String
+    location: String
   }
 
   input LogDataInput {
@@ -26,6 +27,7 @@ export const typeDefs = gql`
     jsHeapSizeLimit: String
     totalJSHeapSize: String
     usedJSHeapSize: String
+    location: String
   }
 
   type MemoryAverage {
@@ -40,11 +42,10 @@ export const typeDefs = gql`
   }
 
   type Mutation {
-    sendMail(
-      message: SendMailMessageInput
-      attachments: [Upload!]
-    ): String
     logMemory(
+     log: LogDataInput!
+    ): String
+    sendMemory(
      log: LogDataInput!
     ): String
   }
